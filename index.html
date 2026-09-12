@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vitrina K-Beauty — Zulibeth Restrepo</title>
+<meta name="description" content="Skincare coreano, protección solar y cuidado capilar original. Precios en pesos colombianos, envíos a toda Colombia. Arma tu pedido y pídelo por WhatsApp.">
+<meta name="author" content="Zulibeth Restrepo">
+<link rel="canonical" href="https://zulibethrestrepo-art.github.io/vitrina/">
+<meta name="theme-color" content="#EDF0EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F130F" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vitrina K-Beauty">
+<meta property="og:title" content="Vitrina K-Beauty — Zulibeth Restrepo">
+<meta property="og:description" content="Skincare coreano, protección solar y cuidado capilar original. Precios en pesos colombianos, envíos a toda Colombia. Arma tu pedido y pídelo por WhatsApp.">
+<meta property="og:url" content="https://zulibethrestrepo-art.github.io/vitrina/">
+<meta property="og:image" content="https://zulibethrestrepo-art.github.io/vitrina/img/og.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="Producto de skincare coreano del catálogo">
+<meta property="og:locale" content="es_CO">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vitrina K-Beauty — Zulibeth Restrepo">
+<meta name="twitter:description" content="Skincare coreano, protección solar y cuidado capilar original. Precios en pesos colombianos, envíos a toda Colombia. Arma tu pedido y pídelo por WhatsApp.">
+<meta name="twitter:image" content="https://zulibethrestrepo-art.github.io/vitrina/img/og.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20100%20100'%3E%3Ctext%20y%3D'.9em'%20font-size%3D'88'%3E%F0%9F%A7%B4%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<style>
+  /* ---------- tokens ---------- */
+  :root{
+    --ink:#16201C;
+    --ink-2:#3F4B45;
+    --muted:#6E7A73;
+    --ground:#EDF0EC;
+    --surface:#FFFFFF;
+    --surface-2:#F6F8F5;
+    --line:#D6DDD6;
+    --line-soft:#E4E9E3;
+    --accent:#2F6354;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#DEEAE4;
+    --shadow:0 1px 2px rgba(22,32,28,.05), 0 10px 26px rgba(22,32,28,.06);
+    --shadow-lift:0 2px 4px rgba(22,32,28,.07), 0 18px 40px rgba(22,32,28,.10);
+
+    /* tintes por marca — se mantienen claros en ambos temas (son la "repisa") */
+    --t-iunik:#E4EFE0;
+    --t-haru:#ECE8F1;
+    --t-abib:#E8EAE9;
+    --t-epii:#E2E8F4;
+    --t-sung:#F6EFDC;
+    --t-heavy:#F6E5EB;
+
+    --maxw:1180px;
+    --step-0:.9375rem;
+    --step-1:1.0625rem;
+    --step-2:1.375rem;
+    --step-3:1.875rem;
+    --step-4:clamp(2.4rem, 6.2vw, 4.15rem);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#E7ECE7;
+      --ink-2:#BAC5BE;
+      --muted:#8C988E;
+      --ground:#0F130F;
+      --surface:#171C18;
+      --surface-2:#1D231E;
+      --line:#2B332D;
+      --line-soft:#232A25;
+      --accent:#8CC9AF;
+      --accent-ink:#0F130F;
+      --accent-soft:#1E2C26;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 26px rgba(0,0,0,.35);
+      --shadow-lift:0 2px 4px rgba(0,0,0,.5), 0 18px 40px rgba(0,0,0,.45);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#E7ECE7;
+    --ink-2:#BAC5BE;
+    --muted:#8C988E;
+    --ground:#0F130F;
+    --surface:#171C18;
+    --surface-2:#1D231E;
+    --line:#2B332D;
+    --line-soft:#232A25;
+    --accent:#8CC9AF;
+    --accent-ink:#0F130F;
+    --accent-soft:#1E2C26;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 26px rgba(0,0,0,.35);
+    --shadow-lift:0 2px 4px rgba(0,0,0,.5), 0 18px 40px rgba(0,0,0,.45);
+  }
+
+  /* ---------- base ---------- */
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"Gothic A1","Helvetica Neue",Arial,sans-serif;
+    font-size:var(--step-0);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:5.5rem;
+  }
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem);}
+
+  .eyebrow{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.6875rem;
+    font-weight:500;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(3rem,9vw,6rem) 0 clamp(2rem,5vw,3rem);}
+  .hero__mark{
+    display:flex;align-items:baseline;gap:.85rem;flex-wrap:wrap;
+    margin-bottom:clamp(1.6rem,4vw,2.6rem);
+  }
+  .hero__mark .dot{
+    width:.5rem;height:.5rem;border-radius:50%;
+    background:var(--accent);
+    transform:translateY(-.15rem);
+  }
+  .hero h1{
+    font-family:"Nanum Myeongjo",Georgia,"Times New Roman",serif;
+    font-weight:800;
+    font-size:var(--step-4);
+    line-height:1.02;
+    letter-spacing:-.018em;
+    margin:0 0 1.1rem;
+    text-wrap:balance;
+    max-width:14ch;
+  }
+  .hero h1 em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--accent);
+  }
+  .hero__lede{
+    font-size:var(--step-1);
+    color:var(--ink-2);
+    max-width:56ch;
+    font-weight:300;
+    margin:0 0 clamp(1.8rem,4vw,2.6rem);
+  }
+  .facts{
+    display:flex;flex-wrap:wrap;gap:0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .fact{
+    padding:1rem 1.6rem 1rem 0;
+    margin-right:1.6rem;
+    border-right:1px solid var(--line-soft);
+    display:flex;flex-direction:column;gap:.15rem;
+  }
+  .fact:last-child{border-right:0;margin-right:0;padding-right:0;}
+  .fact b{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:1.5rem;font-weight:500;line-height:1;
+    font-variant-numeric:tabular-nums;
+    color:var(--ink);
+  }
+
+  /* ---------- filtros ---------- */
+  .rail{
+    position:sticky;top:0;z-index:40;
+    background:color-mix(in srgb, var(--ground) 88%, transparent);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    margin-top:clamp(2rem,5vw,3.2rem);
+  }
+  .rail::after{
+    content:"";
+    position:absolute;right:0;top:0;bottom:1px;width:3rem;
+    background:linear-gradient(to left, var(--ground), transparent);
+    pointer-events:none;
+  }
+  .rail__in{
+    display:flex;align-items:center;gap:.45rem;
+    overflow-x:auto;
+    padding-top:.7rem;padding-bottom:.7rem;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .rail__in::-webkit-scrollbar{display:none;}
+  .chip{
+    flex:0 0 auto;
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-2);
+    background:transparent;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:.42rem .85rem;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:background .18s ease, color .18s ease, border-color .18s ease;
+  }
+  .chip:hover{border-color:var(--accent);color:var(--ink);}
+  .chip[aria-pressed="true"]{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:var(--accent-ink);
+  }
+  .chip .n{opacity:.6;margin-left:.4rem;}
+
+  /* ---------- secciones ---------- */
+  .section{padding-top:clamp(2.8rem,6vw,4.2rem);}
+  .section[hidden]{display:none;}
+  .section__head{
+    display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;
+    padding-bottom:.9rem;
+    border-bottom:1px solid var(--line);
+    margin-bottom:clamp(1.4rem,3vw,2rem);
+  }
+  .section__head h2{
+    font-family:"Nanum Myeongjo",Georgia,serif;
+    font-weight:700;
+    font-size:var(--step-3);
+    line-height:1.1;
+    letter-spacing:-.01em;
+    margin:0;
+  }
+  .section__head p{margin:.3rem 0 0;color:var(--muted);font-size:.875rem;font-weight:300;max-width:46ch;}
+
+  /* ---------- grid + tarjetas ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(272px,1fr));
+    gap:clamp(1rem,2vw,1.5rem);
+  }
+  .card{
+    display:flex;flex-direction:column;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:3px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+  }
+  .card[hidden]{display:none;}
+  .card:hover{box-shadow:var(--shadow-lift);transform:translateY(-3px);}
+  .card.is-picked{border-color:var(--accent);}
+
+  .card__shelf{
+    position:relative;
+    aspect-ratio:var(--shelf-ar,1/1);
+    background:var(--tint,#EEE);
+    overflow:hidden;
+  }
+  .card__shelf img{
+    width:100%;height:100%;
+    object-fit:cover;object-position:center;
+    transition:transform .4s cubic-bezier(.2,.7,.3,1);
+  }
+  .card:hover .card__shelf img{transform:scale(1.045);}
+  .card__brand{
+    position:absolute;top:.7rem;left:.7rem;
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.625rem;letter-spacing:.14em;text-transform:uppercase;
+    color:#16201C;
+    background:rgba(255,255,255,.72);
+    border-radius:2px;
+    padding:.22rem .5rem;
+  }
+
+  .card__body{
+    display:flex;flex-direction:column;gap:.55rem;
+    padding:1.1rem 1.1rem .9rem;
+    flex:1;
+  }
+  .card__name{
+    font-size:var(--step-1);
+    font-weight:700;
+    line-height:1.28;
+    letter-spacing:-.005em;
+    margin:0;
+    text-wrap:balance;
+  }
+  .card__desc{
+    margin:0;
+    font-size:.8438rem;
+    font-weight:300;
+    line-height:1.62;
+    color:var(--ink-2);
+    flex:1;
+  }
+  .card__spec{
+    display:flex;flex-wrap:wrap;gap:.35rem;
+    margin-top:.1rem;
+  }
+  .tag{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.625rem;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);
+    border:1px solid var(--line-soft);
+    border-radius:2px;
+    padding:.2rem .45rem;
+  }
+  .card__foot{
+    display:flex;align-items:center;justify-content:space-between;gap:.75rem;
+    padding:.8rem 1.1rem 1.05rem;
+    border-top:1px solid var(--line-soft);
+  }
+  .price{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:1.125rem;font-weight:500;
+    font-variant-numeric:tabular-nums;
+    letter-spacing:-.01em;
+    color:var(--ink);
+  }
+  .price small{font-size:.625rem;letter-spacing:.1em;color:var(--muted);margin-left:.3rem;}
+
+  .pick{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink);
+    background:transparent;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:.45rem .85rem;
+    cursor:pointer;
+    display:inline-flex;align-items:center;justify-content:center;
+    white-space:nowrap;
+    transition:background .18s ease,color .18s ease,border-color .18s ease;
+  }
+  .pick:hover{border-color:var(--accent);}
+  .pick[aria-pressed="true"]{
+    background:var(--accent);border-color:var(--accent);color:var(--accent-ink);
+  }
+
+  /* ---------- barra de selección ---------- */
+  .tray{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:var(--surface);
+    border-top:1px solid var(--line);
+    box-shadow:0 -10px 30px rgba(22,32,28,.08);
+    transform:translateY(110%);
+    transition:transform .3s cubic-bezier(.2,.7,.3,1);
+  }
+  .tray.is-open{transform:translateY(0);}
+  .tray__bar{
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+    padding:.85rem 0;
+  }
+  .tray__sum{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;}
+  .tray__total{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:1.3rem;font-weight:500;font-variant-numeric:tabular-nums;
+  }
+  .tray__acts{display:flex;align-items:center;gap:.5rem;}
+  .tray__list{
+    border-top:1px solid var(--line-soft);
+    padding:.6rem 0 1rem;
+    max-height:34vh;overflow-y:auto;
+  }
+  .tray__list[hidden]{display:none;}
+  .tray__row{
+    display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+    padding:.4rem 0;
+    border-bottom:1px dashed var(--line-soft);
+    font-size:.8438rem;
+  }
+  .tray__row:last-child{border-bottom:0;}
+  .tray__row span:last-child{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-variant-numeric:tabular-nums;color:var(--muted);
+  }
+
+  /* ---------- pie ---------- */
+  .foot{
+    margin-top:clamp(3.5rem,8vw,5.5rem);
+    border-top:1px solid var(--line);
+    padding:clamp(2rem,5vw,3rem) 0 1rem;
+  }
+  .foot__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.75rem;}
+  .foot h3{
+    font-family:"Nanum Myeongjo",Georgia,serif;
+    font-size:var(--step-2);font-weight:700;margin:0 0 .5rem;line-height:1.2;
+  }
+  .foot p{margin:0;color:var(--ink-2);font-weight:300;font-size:.875rem;max-width:44ch;}
+  .foot .slot{
+    display:inline-block;margin-top:.55rem;
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.75rem;
+    color:var(--muted);
+    border:1px solid var(--line);
+    border-radius:2px;padding:.3rem .55rem;
+  }
+  .foot .link{
+    display:inline-flex;align-items:center;
+    margin:.55rem .4rem 0 0;
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.75rem;
+    color:var(--accent);
+    background:var(--accent-soft);
+    border:1px solid transparent;
+    border-radius:2px;padding:.3rem .55rem;
+    text-decoration:none;
+    transition:border-color .18s ease;
+  }
+  .foot .link:hover{border-color:var(--accent);}
+  .foot .link:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  .btn-wa{
+    flex:0 0 auto;
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;
+    background:var(--accent);color:var(--accent-ink);
+    border:1px solid var(--accent);border-radius:999px;
+    padding:.45rem .95rem;
+    text-decoration:none;
+    display:inline-flex;align-items:center;
+    white-space:nowrap;
+    transition:opacity .18s ease;
+  }
+  .btn-wa:hover{opacity:.88;}
+  .btn-wa:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  .foot__note{
+    margin-top:clamp(2rem,5vw,3rem);
+    padding-top:1rem;
+    border-top:1px solid var(--line-soft);
+    color:var(--muted);font-size:.75rem;font-weight:300;
+  }
+
+  :where(button):focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
+    .card:hover{transform:none;}
+    .card:hover .card__shelf img{transform:none;}
+  }
+
+  @media (max-width:640px){
+    body{padding-bottom:9rem;}
+    .fact{padding-right:1.1rem;margin-right:1.1rem;}
+    .fact b{font-size:1.25rem;}
+    .tray__bar{flex-direction:column;align-items:stretch;gap:.65rem;}
+    .tray__acts{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;}
+    .tray__acts .btn-wa{grid-column:1 / -1;justify-content:center;}
+    .tray__list{max-height:26vh;}
+  }
+</style>
+
+<header class="hero wrap">
+  <div class="hero__mark">
+    <span class="dot"></span>
+    <span class="eyebrow">Vitrina K-Beauty · Catálogo 2026</span>
+  </div>
+  <h1>Rutina coreana, <em>puesta en vitrina</em></h1>
+  <p class="hero__lede">Once referencias originales de skincare, protección solar y cuidado capilar traídas de Corea, más el clásico de mirada que nunca falta. Cada producto con su tamaño real, lo que hace y su precio. Toca <strong>Añadir</strong> para armar tu pedido y pídelo por WhatsApp en un solo toque.</p>
+
+  <div class="facts">
+    <div class="fact"><b>11</b><span class="eyebrow">Referencias</span></div>
+    <div class="fact"><b>6</b><span class="eyebrow">Marcas</span></div>
+    <div class="fact"><b>4</b><span class="eyebrow">Categorías</span></div>
+    <div class="fact"><b>COP</b><span class="eyebrow">Moneda</span></div>
+  </div>
+</header>
+
+<nav class="rail" aria-label="Filtrar por categoría">
+  <div class="rail__in wrap">
+    <button class="chip" data-filter="all" aria-pressed="true">Todo <span class="n">11</span></button>
+    <button class="chip" data-filter="rostro" aria-pressed="false">Rostro <span class="n">5</span></button>
+    <button class="chip" data-filter="sol" aria-pressed="false">Protección solar <span class="n">2</span></button>
+    <button class="chip" data-filter="cabello" aria-pressed="false">Cabello <span class="n">3</span></button>
+    <button class="chip" data-filter="mirada" aria-pressed="false">Mirada <span class="n">1</span></button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- ROSTRO -->
+  <section class="section" data-section="rostro">
+    <div class="section__head">
+      <div>
+        <h2>Rostro</h2>
+        <p>Tónico, esencia, sérum y cremas para hidratar, calmar y devolver firmeza.</p>
+      </div>
+      <span class="eyebrow">5 productos</span>
+    </div>
+    <div class="grid">
+
+      <article class="card" data-cat="rostro" data-price="40000" data-name="iUNIK Centella Relief Sorbet Cream">
+        <div class="card__shelf" style="--tint:var(--t-iunik)">
+          <span class="card__brand">iUNIK</span>
+          <img src="img/01-iunik-sorbet-cream.png" alt="Frasco verde de iUNIK Centella Relief Sorbet Cream" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Centella Relief Sorbet Cream</h3>
+          <p class="card__desc">Crema de textura sorbete que enfría al contacto y baja la sensación de calor en la piel. Su complejo calmante con centella controla el exceso de grasa mientras hidrata en profundidad.</p>
+          <div class="card__spec"><span class="tag">50 ml</span><span class="tag">Piel sensible</span><span class="tag">Rojeces</span></div>
+        </div>
+        <div class="card__foot">
+          <span class="price">$40.000<small>COP</small></span>
+          <button class="pick" aria-pressed="false">Añadir</button>
+        </div>
+      </article>
+
+      <article class="card" data-cat="rostro" data-price="30000" data-name="haruharu wonder Black Rice Hyaluronic Toner">
+        <div class="card__shelf" style="--tint:var(--t-haru)">
+          <span class="card__brand">haruharu wonder</span>
+          <img src="img/03-haruharu-toner.jpg" alt="Botella degradada de haruharu wonder Black Rice Hyaluronic Toner" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Tónico Black Rice Hyaluronic</h3>
+          <p class="card__desc">Tónico hidratante con arroz negro fermentado, ácido hialurónico y bambú negro que calma y empareja el tono. Libre de alcohol y fragancia; la marca reporta 40% más hidratación a los 14 días.</p>
+          <div class="card__spec"><span class="tag">150 ml</span><span class="tag">Sin alcohol</span><span class="tag">Sin fragancia</span></div>
+        </div>
+        <div class="card__foot">
+          <span class="price">$30.000<small>COP</small></span>
+          <button class="pick" aria-pressed="false">Añadir</button>
+        </div>
+      </article>
+
+      <article class="card" data-cat="rostro" data-price="30000" data-name="haruharu wonder Black Rice Probiotics Barrier Essence">
+        <div class="card__shelf" style="--tint:var(--t-haru)">
+          <span class="card__brand">haruharu wonder</span>
+          <img src="img/04-haruharu-essence.jpg" alt="Botella lila de haruharu wonder Black Rice Probiotics Barrier Essence" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Esencia Black Rice Probiotics Barrier</h3>
+          <p class="card__desc">Esencia con probióticos de arroz negro fermentado —el famoso makgeolli— que refuerza la barrera de la piel. Textura ligera y no comedogénica: hidrata sin tapar el poro.</p>
+          <div class="card__spec"><span class="tag">120 ml</span><span class="tag">No comedogénica</span><span class="tag">Barrera</span></div>
+        </div>
+        <div class="card__foot">
+          <span class="price">$30.000<small>COP</small></span>
+          <button class="pick" aria-pressed="false">Añadir</button>
+        </div>
+      </article>
+
+      <article class="card" data-cat="rostro" data-price="40000" data-name="epii HPT6 Ultra Cream 5%">
+        <div class="card__shelf" style="--tint:var(--t-epii)">
+          <span class="card__brand">epii</span>
+          <img src="img/07-epii-cream.jpg" alt="Tarro plateado y esmerilado de epii HPT6 Ultra Cream 5%" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Crema HPT6 Ultra Cream 5%</h3>
+          <p class="card__desc">Crema reafirmante con HPT 5% y Matrixyl Synthe'6 2%, más un complejo de ceramidas, colesterol y ácidos grasos. Textura ligera de absorción rápida que repara la barrera.</p>
+          <div class="card__spec"><span class="tag">50 ml</span><span class="tag">Firmeza</span><span class="tag">Ceramidas</span></div>
+        </div>
+        <div class="card__foot">
+          <span class="price">$40.000<small>COP</small></span>
+          <button class="pick" aria-pressed="false">Añadir</button>
+        </div>
+      </article>
+
+      <article class="card" data-cat="rostro" data-price="40000" data-name="epii HPT6 Ultra Drop 5%">
+        <div class="card__shelf" style="--tint:var(--t-epii)">
+          <span class="card__brand">epii</span>
+          <img src="img/08-epii-drop.jpg" alt="Frasco ovalado de epii HPT6 Ultra Drop 5%" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Sérum antiedad HPT6 Ultra Drop 5%</h3>
+          <p class="card__desc">Sérum concentrado con HPT 5% y Matrixyl Synthe'6 2%. Trabaja sobre líneas finas, arrugas y pérdida de elasticidad, con hidratación profunda para uso diario.</p>
+          <div class="card__spec"><span class="tag">30 ml</span><span class="tag">Antiedad</span><span class="tag">Péptidos</span></div>
+        </div>
+        <div class="card__foot">
+          <span class="price">$40.000<small>COP</small></span>
+          <button class="pick" aria-pressed="false">Añadir</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PROTECCIÓN SOLAR -->
+  <section class="section" data-section="sol">
+    <div class="section__head">
+      <div>
+        <h2>Protección solar</h2>
+        <p>SPF 50+ PA++++ en dos formatos: líquido para la rutina de la mañana, barra para retocar durante el día.</p>
+      </div>
+      <span class="eyebrow">2 productos</span>
+    </div>
+    <div class="grid">
+
+      <article class="card" data-cat="sol" data-price="40000" data-name="iUNIK Centella Calming Daily Sun Water">
+        <div class="card__shelf" style="--tint:var(--t-iunik)">
+          <span class="card__brand">iUNIK</span>
+          <img src="img/02-iunik-sun-water.png" alt="Botella verde claro de iUNIK Centella Calming Daily Sun Water SPF50+" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Protector solar Centella Calming Daily Sun Water</h3>
+          <p class="card__desc">Protector solar líquido, ultraligero y sin sensación pegajosa. Defiende de rayos UVA y UVB mientras calma e hidrata, y se absorbe sin dejar rastro blanco.</p>
+          <div class="card__spec"><span class="tag">120 ml</span><span class="tag">SPF 50+ PA++++</span><span class="tag">Sin rastro blanco</span></div>
+        </div>
+        <div class="card__foot">
+          <span class="price">$40.000<small>COP</small></span>
+          <button class="pick" aria-pressed="false">Añadir</button>
+        </div>
+      </article>
+
+      <article class="card" data-cat="sol" data-price="20000" data-name="Abib Quick Sunstick Protection Bar">
+        <div class="card__shelf" style="--tint:var(--t-abib)">
+          <span class="card__brand">Abib</span>
+          <img src="img/06-abib-sunstick.jpg" alt="Barra negra de protector solar Abib Quick Sunstick Protection Bar" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Protector solar en barra Quick Sunstick</h3>
+          <p class="card__desc">Barra para retocar el protector sobre el maquillaje en segundos. Con centella, aloe y ceramidas: acabado luminoso, sin rastro blanco y sin resecar la piel.</p>
+          <div class="card__spec"><span class="tag">22 g</span><span class="tag">SPF 50+ PA++++</span><span class="tag">Retoque</span></div>
+        </div>
+        <div class="card__foot">
+          <span class="price">$20.000<small>COP</small></span>
+          <button class="pick" aria-pressed="false">Añadir</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CABELLO -->
+  <section class="section" data-section="cabello">
+    <div class="section__head">
+      <div>
+        <h2>Cabello</h2>
+        <p>La línea Silk Peptide EGF completa de Sungboon Editor: lavar, reparar y tratar el cuero cabelludo.</p>
+      </div>
+      <span class="eyebrow">3 productos</span>
+    </div>
+    <div class="grid">
+
+      <article class="card" data-cat="cabello" data-price="50000" data-name="Sungboon Editor Silk Peptide EGF Collagen Intensive Volume Shampoo">
+        <div class="card__shelf" style="--tint:var(--t-sung);--shelf-ar:800/1088">
+          <span class="card__brand">Sungboon Editor</span>
+          <img src="img/09-sungboon-shampoo.png" alt="Botella ámbar con dosificador del shampoo Sungboon Editor Silk Peptide EGF" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Shampoo Silk Peptide EGF Collagen Intensive Volume</h3>
+          <p class="card__desc">Shampoo sin sulfatos con péptidos y EGF que le da cuerpo y resistencia al cabello. La seda líquida y el colágeno lo dejan suave, con movimiento y sin frizz.</p>
+          <div class="card__spec"><span class="tag">400 ml</span><span class="tag">Sin sulfatos</span><span class="tag">Volumen</span></div>
+        </div>
+        <div class="card__foot">
+          <span class="price">$50.000<small>COP</small></span>
+          <button class="pick" aria-pressed="false">Añadir</button>
+        </div>
+      </article>
+
+      <article class="card" data-cat="cabello" data-price="40000" data-name="Sungboon Editor Silk Peptide EGF Collagen Bond Repair Treatment">
+        <div class="card__shelf" style="--tint:var(--t-sung);--shelf-ar:800/1088">
+          <span class="card__brand">Sungboon Editor</span>
+          <img src="img/10-sungboon-treatment.png" alt="Tarro ámbar del tratamiento Sungboon Editor Silk Peptide EGF Collagen Bond Repair" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Tratamiento Silk Peptide EGF Collagen Bond Repair</h3>
+          <p class="card__desc">Mascarilla reparadora con 17 aminoácidos y 30 péptidos de seda que rellena los puntos débiles de la fibra capilar. Para cabello procesado, con químicos o mucho calor.</p>
+          <div class="card__spec"><span class="tag">250 ml</span><span class="tag">Reparación</span><span class="tag">Cabello dañado</span></div>
+        </div>
+        <div class="card__foot">
+          <span class="price">$40.000<small>COP</small></span>
+          <button class="pick" aria-pressed="false">Añadir</button>
+        </div>
+      </article>
+
+      <article class="card" data-cat="cabello" data-price="30000" data-name="Sungboon Editor Silk Peptide EGF Collagen Scalp Serum">
+        <div class="card__shelf" style="--tint:var(--t-sung);--shelf-ar:800/1088">
+          <span class="card__brand">Sungboon Editor</span>
+          <img src="img/11-sungboon-serum.png" alt="Frasco ámbar con boquilla del Sungboon Editor Silk Peptide EGF Collagen Scalp Serum" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Sérum capilar Silk Peptide EGF Collagen Scalp</h3>
+          <p class="card__desc">Sérum de cuero cabelludo con 28 péptidos, EGF y ceramidas. Nutre la raíz y calma la sequedad; se aplica con masaje sobre el cuero cabelludo húmedo y no se enjuaga.</p>
+          <div class="card__spec"><span class="tag">75 ml</span><span class="tag">Cuero cabelludo</span><span class="tag">Sin enjuague</span></div>
+        </div>
+        <div class="card__foot">
+          <span class="price">$30.000<small>COP</small></span>
+          <button class="pick" aria-pressed="false">Añadir</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MIRADA -->
+  <section class="section" data-section="mirada">
+    <div class="section__head">
+      <div>
+        <h2>Mirada</h2>
+        <p>El infaltable de maquillaje, con efecto pestaña postiza y resistente al agua.</p>
+      </div>
+      <span class="eyebrow">1 producto</span>
+    </div>
+    <div class="grid">
+
+      <article class="card" data-cat="mirada" data-price="30000" data-name="Heavy Full Pestañina Figure 4D">
+        <div class="card__shelf" style="--tint:var(--t-heavy)">
+          <span class="card__brand">Heavy Full</span>
+          <img src="img/05-heavyfull-mascara.jpg" alt="Pestañina Heavy Full Figure 4D junto a su caja rosada" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Pestañina Figure 4D</h3>
+          <p class="card__desc">Máscara de pestañas 4D con fibras de seda que alarga, separa y da volumen de pestaña postiza. Fórmula resistente al agua: aguanta eventos, fiestas y días largos sin correrse.</p>
+          <div class="card__spec"><span class="tag">Efecto 4D</span><span class="tag">Fibras de seda</span><span class="tag">Resistente al agua</span></div>
+        </div>
+        <div class="card__foot">
+          <span class="price">$30.000<small>COP</small></span>
+          <button class="pick" aria-pressed="false">Añadir</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot__grid">
+      <div>
+        <h3>¿Cómo pido?</h3>
+        <p>Arma tu selección con el botón Añadir y toca <strong>Pedir por WhatsApp</strong>: te llega el chat con tu lista y el total ya escritos. Solo le das enviar.</p>
+        <a class="link" href="https://wa.me/573107346535" target="_blank" rel="noopener">WhatsApp 310 734 6535</a>
+      </div>
+      <div>
+        <h3>Envíos</h3>
+        <p>Enviamos a toda Colombia. El costo depende de la ciudad y te lo confirmo antes de despachar, junto con el tiempo de entrega.</p>
+        <span class="slot">Cobertura nacional</span>
+      </div>
+      <div>
+        <h3>Mira las reseñas</h3>
+        <p>Antes de pedir, ve los productos en uso: subo reseñas y resultados reales en mis redes. Todo es producto original de marca, sellado de fábrica.</p>
+        <a class="link" href="https://www.instagram.com/zulibethrestrepo14/" target="_blank" rel="noopener">Instagram @zulibethrestrepo14</a>
+        <a class="link" href="https://www.tiktok.com/@zulibethrestrepougc" target="_blank" rel="noopener">TikTok @zulibethrestrepougc</a>
+      </div>
+    </div>
+    <p class="foot__note">Precios en pesos colombianos (COP), sujetos a cambio según disponibilidad. Estos productos son cosméticos de cuidado personal: no son medicamentos ni tratan condiciones médicas. Las descripciones recogen la información publicada por cada marca.</p>
+  </footer>
+</main>
+
+<div class="tray" id="tray" aria-live="polite">
+  <div class="wrap">
+    <div class="tray__bar">
+      <div class="tray__sum">
+        <span class="tray__total" id="trayTotal">$0</span>
+        <span class="eyebrow" id="trayCount">0 productos</span>
+      </div>
+      <div class="tray__acts">
+        <button class="pick" id="trayToggle" aria-pressed="false" aria-controls="trayList">Ver detalle</button>
+        <button class="pick" id="trayClear">Vaciar</button>
+        <a class="btn-wa" id="trayWa" href="https://wa.me/573107346535" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+    </div>
+    <div class="tray__list" id="trayList" hidden></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.section'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var tray = document.getElementById('tray');
+  var trayTotal = document.getElementById('trayTotal');
+  var trayCount = document.getElementById('trayCount');
+  var trayList = document.getElementById('trayList');
+  var trayToggle = document.getElementById('trayToggle');
+  var trayClear = document.getElementById('trayClear');
+  var trayWa = document.getElementById('trayWa');
+  var WA = 'https://wa.me/573107346535';
+
+  var fmt = new Intl.NumberFormat('es-CO', {maximumFractionDigits:0});
+  function money(n){ return '$' + fmt.format(n); }
+
+  /* --- filtros --- */
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      var f = chip.dataset.filter;
+      chips.forEach(function(c){ c.setAttribute('aria-pressed', String(c === chip)); });
+      sections.forEach(function(s){
+        s.hidden = !(f === 'all' || s.dataset.section === f);
+      });
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  });
+
+  /* --- selección --- */
+  function refresh(){
+    var picked = cards.filter(function(c){ return c.classList.contains('is-picked'); });
+    var total = picked.reduce(function(sum, c){ return sum + Number(c.dataset.price); }, 0);
+
+    trayTotal.textContent = money(total);
+    trayCount.textContent = picked.length === 1 ? '1 producto' : picked.length + ' productos';
+    tray.classList.toggle('is-open', picked.length > 0);
+
+    trayList.innerHTML = picked.map(function(c){
+      var row = document.createElement('div');
+      row.className = 'tray__row';
+      var a = document.createElement('span');
+      a.textContent = c.dataset.name;
+      var b = document.createElement('span');
+      b.textContent = money(Number(c.dataset.price));
+      row.appendChild(a); row.appendChild(b);
+      return row.outerHTML;
+    }).join('');
+
+    var msg = 'Hola Zulibeth, vi tu vitrina y quiero pedir:\n\n'
+      + picked.map(function(c){ return '• ' + c.dataset.name + ' — ' + money(Number(c.dataset.price)); }).join('\n')
+      + '\n\nTotal: ' + money(total);
+    trayWa.href = WA + '?text=' + encodeURIComponent(msg);
+
+    if (picked.length === 0){
+      trayList.hidden = true;
+      trayToggle.setAttribute('aria-pressed','false');
+      trayToggle.textContent = 'Ver detalle';
+    }
+  }
+
+  cards.forEach(function(card){
+    var btn = card.querySelector('.pick');
+    btn.addEventListener('click', function(){
+      var on = !card.classList.contains('is-picked');
+      card.classList.toggle('is-picked', on);
+      btn.setAttribute('aria-pressed', String(on));
+      btn.textContent = on ? 'Quitar' : 'Añadir';
+      refresh();
+    });
+  });
+
+  trayToggle.addEventListener('click', function(){
+    var open = trayList.hidden;
+    trayList.hidden = !open;
+    trayToggle.setAttribute('aria-pressed', String(open));
+    trayToggle.textContent = open ? 'Ocultar detalle' : 'Ver detalle';
+  });
+
+  trayClear.addEventListener('click', function(){
+    cards.forEach(function(card){
+      card.classList.remove('is-picked');
+      var btn = card.querySelector('.pick');
+      btn.setAttribute('aria-pressed','false');
+      btn.textContent = 'Añadir';
+    });
+    refresh();
+  });
+
+  refresh();
+})();
+</script>
+</body>
+</html>
