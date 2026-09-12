@@ -316,6 +316,7 @@
     padding:.8rem 1.1rem 1.05rem;
     border-top:1px solid var(--line-soft);
   }
+  .card__prices{display:flex;flex-direction:column;gap:.2rem;min-width:0;}
   .price{
     font-family:"IBM Plex Mono",ui-monospace,monospace;
     font-size:1.125rem;font-weight:500;
@@ -324,6 +325,16 @@
     color:var(--ink);
   }
   .price small{font-size:.625rem;letter-spacing:.1em;color:var(--muted);margin-left:.3rem;}
+  .ref{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.625rem;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-variant-numeric:tabular-nums;
+    white-space:nowrap;
+  }
+  .ref s{text-decoration-thickness:1px;text-underline-offset:2px;}
 
   .pick{
     font-family:"IBM Plex Mono",ui-monospace,monospace;
@@ -493,7 +504,7 @@
     </div>
     <div class="grid">
 
-      <article class="card" data-cat="rostro" data-price="40000" data-name="iUNIK Centella Relief Sorbet Cream">
+      <article class="card" data-cat="rostro" data-price="50000" data-name="iUNIK Centella Relief Sorbet Cream">
         <div class="card__shelf" style="--tint:var(--t-iunik)">
           <span class="card__brand">iUNIK</span>
           <img src="img/01-iunik-sorbet-cream.png" alt="Frasco verde de iUNIK Centella Relief Sorbet Cream" loading="lazy">
@@ -504,12 +515,15 @@
           <div class="card__spec"><span class="tag">50 ml</span><span class="tag">Piel sensible</span><span class="tag">Rojeces</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$40.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$50.000<small>COP</small></span>
+            <span class="ref">En YesStyle <s>$69.900</s></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
 
-      <article class="card" data-cat="rostro" data-price="30000" data-name="haruharu wonder Black Rice Hyaluronic Toner">
+      <article class="card" data-cat="rostro" data-price="35000" data-name="haruharu wonder Black Rice Hyaluronic Toner">
         <div class="card__shelf" style="--tint:var(--t-haru)">
           <span class="card__brand">haruharu wonder</span>
           <img src="img/03-haruharu-toner.jpg" alt="Botella degradada de haruharu wonder Black Rice Hyaluronic Toner" loading="lazy">
@@ -520,12 +534,15 @@
           <div class="card__spec"><span class="tag">150 ml</span><span class="tag">Sin alcohol</span><span class="tag">Sin fragancia</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$30.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$35.000<small>COP</small></span>
+            <span class="ref">En YesStyle <s>$55.400</s></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
 
-      <article class="card" data-cat="rostro" data-price="30000" data-name="haruharu wonder Black Rice Probiotics Barrier Essence">
+      <article class="card" data-cat="rostro" data-price="40000" data-name="haruharu wonder Black Rice Probiotics Barrier Essence">
         <div class="card__shelf" style="--tint:var(--t-haru)">
           <span class="card__brand">haruharu wonder</span>
           <img src="img/04-haruharu-essence.jpg" alt="Botella lila de haruharu wonder Black Rice Probiotics Barrier Essence" loading="lazy">
@@ -536,7 +553,10 @@
           <div class="card__spec"><span class="tag">120 ml</span><span class="tag">No comedogénica</span><span class="tag">Barrera</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$30.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$40.000<small>COP</small></span>
+            <span class="ref">En YesStyle <s>$78.400</s></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
@@ -552,7 +572,10 @@
           <div class="card__spec"><span class="tag">50 ml</span><span class="tag">Firmeza</span><span class="tag">Ceramidas</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$40.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$40.000<small>COP</small></span>
+            <span class="ref">En YesStyle <s>$69.350</s></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
@@ -568,7 +591,10 @@
           <div class="card__spec"><span class="tag">30 ml</span><span class="tag">Antiedad</span><span class="tag">Péptidos</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$40.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$40.000<small>COP</small></span>
+            <span class="ref">En YesStyle <s>$69.350</s></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
@@ -584,7 +610,10 @@
           <div class="card__spec"><span class="tag">50 ml</span><span class="tag">Ectoína + pantenol</span><span class="tag">Piel reactiva</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$50.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$50.000<small>COP</small></span>
+            <span class="ref">En YesStyle <s>$69.900</s></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
@@ -603,7 +632,7 @@
     </div>
     <div class="grid">
 
-      <article class="card" data-cat="sol" data-price="40000" data-name="iUNIK Centella Calming Daily Sun Water">
+      <article class="card" data-cat="sol" data-price="50000" data-name="iUNIK Centella Calming Daily Sun Water">
         <div class="card__shelf" style="--tint:var(--t-iunik)">
           <span class="card__brand">iUNIK</span>
           <img src="img/02-iunik-sun-water.png" alt="Botella verde claro de iUNIK Centella Calming Daily Sun Water SPF50+" loading="lazy">
@@ -614,12 +643,15 @@
           <div class="card__spec"><span class="tag">120 ml</span><span class="tag">SPF 50+ PA++++</span><span class="tag">Sin rastro blanco</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$40.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$50.000<small>COP</small></span>
+            <span class="ref">En YesStyle <s>$74.800</s></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
 
-      <article class="card" data-cat="sol" data-price="20000" data-name="Abib Quick Sunstick Protection Bar">
+      <article class="card" data-cat="sol" data-price="30000" data-name="Abib Quick Sunstick Protection Bar">
         <div class="card__shelf" style="--tint:var(--t-abib)">
           <span class="card__brand">Abib</span>
           <img src="img/06-abib-sunstick.jpg" alt="Barra negra de protector solar Abib Quick Sunstick Protection Bar" loading="lazy">
@@ -630,7 +662,10 @@
           <div class="card__spec"><span class="tag">22 g</span><span class="tag">SPF 50+ PA++++</span><span class="tag">Retoque</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$20.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$30.000<small>COP</small></span>
+            <span class="ref">En YesStyle <s>$48.900</s></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
@@ -649,7 +684,7 @@
     </div>
     <div class="grid">
 
-      <article class="card" data-cat="cabello" data-price="50000" data-name="Sungboon Editor Silk Peptide EGF Collagen Intensive Volume Shampoo">
+      <article class="card" data-cat="cabello" data-price="60000" data-name="Sungboon Editor Silk Peptide EGF Collagen Intensive Volume Shampoo">
         <div class="card__shelf" style="--tint:var(--t-sung);--shelf-ar:800/1088">
           <span class="card__brand">Sungboon Editor</span>
           <img src="img/09-sungboon-shampoo.png" alt="Botella ámbar con dosificador del shampoo Sungboon Editor Silk Peptide EGF" loading="lazy">
@@ -660,12 +695,15 @@
           <div class="card__spec"><span class="tag">400 ml</span><span class="tag">Sin sulfatos</span><span class="tag">Volumen</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$50.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$60.000<small>COP</small></span>
+            <span class="ref">En YesStyle <s>$86.200</s></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
 
-      <article class="card" data-cat="cabello" data-price="40000" data-name="Sungboon Editor Silk Peptide EGF Collagen Bond Repair Treatment">
+      <article class="card" data-cat="cabello" data-price="50000" data-name="Sungboon Editor Silk Peptide EGF Collagen Bond Repair Treatment">
         <div class="card__shelf" style="--tint:var(--t-sung);--shelf-ar:800/1088">
           <span class="card__brand">Sungboon Editor</span>
           <img src="img/10-sungboon-treatment.png" alt="Tarro ámbar del tratamiento Sungboon Editor Silk Peptide EGF Collagen Bond Repair" loading="lazy">
@@ -676,12 +714,15 @@
           <div class="card__spec"><span class="tag">250 ml</span><span class="tag">Reparación</span><span class="tag">Cabello dañado</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$40.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$50.000<small>COP</small></span>
+            <span class="ref">En YesStyle <s>$101.000</s></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
 
-      <article class="card" data-cat="cabello" data-price="30000" data-name="Sungboon Editor Silk Peptide EGF Collagen Scalp Serum">
+      <article class="card" data-cat="cabello" data-price="40000" data-name="Sungboon Editor Silk Peptide EGF Collagen Scalp Serum">
         <div class="card__shelf" style="--tint:var(--t-sung);--shelf-ar:800/1088">
           <span class="card__brand">Sungboon Editor</span>
           <img src="img/11-sungboon-serum.png" alt="Frasco ámbar con boquilla del Sungboon Editor Silk Peptide EGF Collagen Scalp Serum" loading="lazy">
@@ -692,7 +733,10 @@
           <div class="card__spec"><span class="tag">75 ml</span><span class="tag">Cuero cabelludo</span><span class="tag">Sin enjuague</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$30.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$40.000<small>COP</small></span>
+            <span class="ref">En YesStyle <s>$51.200</s></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
@@ -722,7 +766,9 @@
           <div class="card__spec"><span class="tag">Efecto 4D</span><span class="tag">Fibras de seda</span><span class="tag">Resistente al agua</span></div>
         </div>
         <div class="card__foot">
-          <span class="price">$30.000<small>COP</small></span>
+          <div class="card__prices">
+            <span class="price">$30.000<small>COP</small></span>
+          </div>
           <button class="pick" aria-pressed="false">Añadir</button>
         </div>
       </article>
